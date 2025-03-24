@@ -1,4 +1,4 @@
-                                                        ## 🌟 About Me
+                                                        ## 🌟 About Me 🌟 ## 
 Hi, I'm Colince! A curious and creative mind with a passion for:
 - **Football**: Strategic gameplay and content creation.
 - **Coding**: Developing bots and websites.
