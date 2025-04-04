@@ -13,6 +13,15 @@
             background-color: #f8f9fa;
             overflow-x: hidden;
         }
+        body {
+            
+            background-image: url('profile.logo.jpg');
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position: right center;
+            background-attachment: fixed;
+
+        }
 
         /* Header Styling */
         header {
@@ -124,6 +133,35 @@
                 transform: translateY(0);
             }
         }
+        @media screen and (max-width: 768px) {
+  body {
+    font-size: 14px; 
+  }
+
+  .container {
+    padding: 10px; 
+    flex-direction: column; 
+
+  img {
+    width: 100%;
+  }
+}
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                font-size: 1.2rem;
+            }
+            nav button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            section h2 {
+                font-size: 1.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -146,15 +184,14 @@
         <h2>About Me</h2>
         <p>Hi, I'm Colince! A curious and creative mind with a passion for football, coding, design, and academic excellence. I thrive on learning new skills and applying them to meaningful projects. Welcome to my portfolio!</p>
     </section>
-
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>⚽ Football Content Creation: Logos, commentary, and strategic gameplay in Dream League Soccer.</li>
-            <li>💻 Coding: Developing bots and websites with practical learning.</li>
-            <li>🎨 Creative Design: Attention to detail for high-quality outputs.</li>
-            <li>✍ Writing: Academic and professional essays, case studies, and analyses.</li>
-            <li>🌐 Digital Marketing: Community engagement and online branding strategies.</li>
+            <li> <strong>⚽ Football Content Creation</strong>: Logos, commentary, and strategic gameplay in Dream League Soccer.</li>
+            <li> <strong>💻 Coding</strong>: Developing bots and websites with practical learning.</li>
+            <li> <strong>🎨 Creative Design</strong>: Attention to detail for high-quality outputs.</li>
+            <li> <strong>✍ Writing</strong>: Academic and professional essays, case studies, and analyses.</li>
+            <li> <strong> 🌐 Digital Marketing</strong>: Community engagement and online branding strategies.</li>
         </ul>
     </section>
 
