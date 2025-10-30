@@ -1,4 +1,3 @@
-Colince Lupin - Portfolio
 🌟 About Me 🌟
 Hello! I’m Colince Lupin, a dedicated and creative individual passionate about leveraging technology and design to solve challenges. My interests include:
 
