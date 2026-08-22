@@ -6,6 +6,9 @@
 <title>Colince Lupin — Portfolio</title>
 <meta name="description" content="Colince Lupin — coder, designer, writer and football strategist. Explore my projects, skills and achievements.">
 <link rel="icon" href="profile.logo.jpg">
+<link rel="canonical" href="https://lupin-lion.github.io/portfolio/">
+<meta name="theme-color" content="#0b0c14" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f5fb" media="(prefers-color-scheme: light)">
 
 <meta property="og:title" content="Colince Lupin — Portfolio">
 <meta property="og:description" content="Coder, designer, writer and football strategist. Explore my projects, skills and achievements.">
@@ -19,6 +22,21 @@
 <meta name="twitter:image" content="https://lupin-lion.github.io/portfolio/profile.logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Colince Lupin",
+    "url": "https://lupin-lion.github.io/portfolio/",
+    "image": "https://lupin-lion.github.io/portfolio/profile.logo.jpg",
+    "jobTitle": "Developer & Designer",
+    "email": "mailto:colincesibuor122@gmail.com",
+    "sameAs": [
+        "https://github.com/Lupin-lion",
+        "https://www.facebook.com/share/1EpCRS7kx4/"
+    ]
+}
+</script>
 <style>
     :root {
         --bg: #0b0c14;
@@ -502,9 +520,44 @@
         box-shadow: var(--shadow);
     }
     .back-to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+
+    .progress-bar {
+        position: fixed;
+        top: 0; left: 0;
+        height: 3px;
+        width: 0%;
+        background: linear-gradient(120deg, var(--accent), var(--accent-2));
+        z-index: 1100;
+        transition: width 0.1s ease-out;
+    }
+
+    .skip-link {
+        position: absolute;
+        left: 16px; top: -60px;
+        background: var(--accent);
+        color: #0b0c14;
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-weight: 700;
+        text-decoration: none;
+        z-index: 1200;
+        transition: top 0.2s ease;
+    }
+    .skip-link:focus { top: 16px; }
+
+    @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+        }
+    }
 </style>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+    <div class="progress-bar" id="progressBar"></div>
     <div class="bg-glow"></div>
 
     <nav>
@@ -544,7 +597,7 @@
         <span class="scroll-cue">Scroll ↓</span>
     </header>
 
-    <main>
+    <main id="main">
         <section id="about">
             <div class="section-head reveal">
                 <p class="eyebrow">Get to know me</p>
@@ -633,7 +686,7 @@
             </div>
             <div class="project-grid reveal">
                 <div class="project-card">
-                    <div class="project-thumb"><img src="Streamer.PNG" alt="Streamer Website"></div>
+                    <div class="project-thumb"><img src="Streamer.PNG" alt="Streamer Website" loading="lazy" width="300" height="190"></div>
                     <div class="project-body">
                         <h3>Streamer Website</h3>
                         <p>A platform for live gaming streams and community engagement.</p>
@@ -642,7 +695,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-thumb"><img src="wolf lord md logo.jpg" alt="Wolf-MD Logo"></div>
+                    <div class="project-thumb"><img src="wolf lord md logo.jpg" alt="Wolf-MD Logo" loading="lazy" width="300" height="190"></div>
                     <div class="project-body">
                         <h3>Wolf-MD WhatsApp Bot</h3>
                         <p>Auto-status views, media downloads, and anti-delete functionality.</p>
@@ -651,7 +704,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-thumb"><img src="martsautomobile.PNG" alt="Marts Automobile Website"></div>
+                    <div class="project-thumb"><img src="martsautomobile.PNG" alt="Marts Automobile Website" loading="lazy" width="300" height="190"></div>
                     <div class="project-body">
                         <h3>Marts Automobile Website</h3>
                         <p>A site showcasing premium cars and exceptional service.</p>
@@ -660,7 +713,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-thumb"><img src="chelsea-fc-2-logo.png" alt="Chelsea FC Logo Design"></div>
+                    <div class="project-thumb"><img src="chelsea-fc-2-logo.png" alt="Chelsea FC Logo Design" loading="lazy" width="300" height="190"></div>
                     <div class="project-body">
                         <h3>Football Club Logo Design</h3>
                         <p>Professionally designed club logos using Illustrator and Canva.</p>
@@ -669,7 +722,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <div class="project-thumb"><img src="academic.jpg" alt="Academic Case Studies"></div>
+                    <div class="project-thumb"><img src="academic.jpg" alt="Academic Case Studies" loading="lazy" width="300" height="190"></div>
                     <div class="project-body">
                         <h3>Academic Case Studies</h3>
                         <p>In-depth analysis on organizational behavior and employee engagement.</p>
@@ -830,6 +883,15 @@
             backToTop.classList.toggle('show', window.scrollY > 500);
         });
         backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Scroll progress bar
+        const progressBar = document.getElementById('progressBar');
+        window.addEventListener('scroll', () => {
+            const doc = document.documentElement;
+            const scrollable = doc.scrollHeight - doc.clientHeight;
+            const pct = scrollable > 0 ? (doc.scrollTop / scrollable) * 100 : 0;
+            progressBar.style.width = pct + '%';
+        });
     </script>
 </body>
 </html>
