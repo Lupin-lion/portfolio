@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Colince Lupin — Portfolio</title>
-<meta name="description" content="Colince Lupin — coder, designer, writer and football strategist. Explore my projects, skills and achievements.">
+<meta name="description" content="Colince Lupin — developer and designer. Explore my projects and skills.">
 <link rel="icon" href="profile.logo.jpg">
 <link rel="canonical" href="https://lupin-lion.github.io/portfolio/">
 <meta name="theme-color" content="#0b0c14" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#f5f5fb" media="(prefers-color-scheme: light)">
 
 <meta property="og:title" content="Colince Lupin — Portfolio">
-<meta property="og:description" content="Coder, designer, writer and football strategist. Explore my projects, skills and achievements.">
+<meta property="og:description" content="Developer and designer. Explore my projects and skills.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://lupin-lion.github.io/portfolio/">
 <meta property="og:image" content="https://lupin-lion.github.io/portfolio/profile.logo.jpg">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Colince Lupin — Portfolio">
-<meta name="twitter:description" content="Coder, designer, writer and football strategist.">
+<meta name="twitter:description" content="Developer and designer. Explore my projects and skills.">
 <meta name="twitter:image" content="https://lupin-lion.github.io/portfolio/profile.logo.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -320,33 +320,11 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* About */
-    .about-grid {
-        display: grid;
-        grid-template-columns: 1.1fr 1.4fr;
-        gap: 40px;
-        align-items: center;
+    .about-body {
+        max-width: 720px;
+        margin: 0 auto;
     }
-    .about-grid p { color: var(--text-dim); line-height: 1.8; font-size: 1.05rem; }
-    .interest-cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
-    }
-    .interest-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 20px;
-        transition: 0.25s ease;
-    }
-    .interest-card:hover { transform: translateY(-6px); border-color: var(--accent); }
-    .interest-card .ic { font-size: 1.6rem; margin-bottom: 8px; display: block; }
-    .interest-card h4 { margin: 0 0 4px; font-size: 1rem; }
-    .interest-card p { margin: 0; font-size: 0.85rem; color: var(--text-dim); }
-
-    @media (max-width: 780px) {
-        .about-grid { grid-template-columns: 1fr; }
-    }
+    .about-body p { color: var(--text-dim); line-height: 1.8; font-size: 1.05rem; text-align: center; }
 
     /* Skills */
     .skills-grid {
@@ -421,48 +399,6 @@
     }
     .project-link.disabled { color: var(--text-dim); cursor: default; }
     .project-link:not(.disabled):hover { gap: 10px; }
-
-    /* Achievements timeline */
-    .timeline { position: relative; margin: 0 auto; max-width: 720px; }
-    .timeline::before {
-        content: '';
-        position: absolute;
-        left: 20px;
-        top: 6px; bottom: 6px;
-        width: 2px;
-        background: linear-gradient(var(--accent), var(--accent-2));
-    }
-    .timeline-item { position: relative; padding: 0 0 34px 56px; }
-    .timeline-item:last-child { padding-bottom: 0; }
-    .timeline-item::before {
-        content: '';
-        position: absolute;
-        left: 12px; top: 4px;
-        width: 18px; height: 18px;
-        border-radius: 50%;
-        background: var(--bg);
-        border: 3px solid var(--accent-2);
-    }
-    .timeline-item h4 { margin: 0 0 6px; font-size: 1.02rem; }
-    .timeline-item p { margin: 0; color: var(--text-dim); font-size: 0.92rem; }
-
-    /* Hobbies */
-    .hobby-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-        gap: 18px;
-    }
-    .hobby-card {
-        text-align: center;
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 28px 16px;
-        transition: 0.25s ease;
-    }
-    .hobby-card:hover { transform: translateY(-6px) rotate(-1deg); border-color: var(--accent-3); }
-    .hobby-card .ic { font-size: 2rem; display: block; margin-bottom: 10px; }
-    .hobby-card span { font-weight: 600; font-size: 0.95rem; }
 
     /* Contact */
     .contact-card {
@@ -566,8 +502,6 @@
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-right">
@@ -577,7 +511,6 @@
     </nav>
 
     <header class="hero" id="top">
-        <p class="eyebrow">Welcome to my corner of the web</p>
         <span class="availability-badge"><span class="dot"></span>Open to work &amp; collaborations</span>
         <div class="hero-ring">
             <img src="profile.logo.jpg" alt="Colince Lupin">
@@ -603,46 +536,23 @@
                 <p class="eyebrow">Get to know me</p>
                 <h2>About Me</h2>
             </div>
-            <div class="about-grid reveal">
-                <div class="interest-cards">
-                    <div class="interest-card">
-                        <span class="ic">💻</span>
-                        <h4>Coding</h4>
-                        <p>Bots &amp; websites, built through hands-on learning.</p>
-                    </div>
-                    <div class="interest-card">
-                        <span class="ic">🎨</span>
-                        <h4>Design</h4>
-                        <p>Logos &amp; graphics with obsessive attention to detail.</p>
-                    </div>
-                    <div class="interest-card">
-                        <span class="ic">✍️</span>
-                        <h4>Writing</h4>
-                        <p>Academic essays, case studies and analyses.</p>
-                    </div>
-                    <div class="interest-card">
-                        <span class="ic">⚽</span>
-                        <h4>Football</h4>
-                        <p>Strategic gameplay and matchday content.</p>
-                    </div>
-                </div>
+            <div class="about-body reveal">
                 <p>
-                    Hi, I'm Colince — a curious and creative mind with a passion for football, coding, design,
-                    and academic excellence. I thrive on picking up new skills fast and turning them into real,
-                    working projects rather than letting them stay theory. Whether it's shipping a small bot,
-                    designing a logo, or breaking down a case study, I care about the details that make the
-                    final result feel finished.
+                    I'm Colince, a developer and designer who likes building things that actually work —
+                    from WhatsApp bots to full web applications. I pick up new tools quickly and put them
+                    to use on real projects rather than letting them stay theoretical, and I care about the
+                    details that make a finished product feel complete.
                     <br><br>
-                    <em>"In the wilderness of challenges, I rise with the strength of a wolf, led by the wisdom of Lupin."</em>
+                    Outside of client and personal projects, I follow football closely and enjoy gaming and trivia.
                 </p>
             </div>
         </section>
 
         <section id="skills">
             <div class="section-head reveal">
-                <p class="eyebrow">What I bring to the table</p>
+                <p class="eyebrow">Core Skills</p>
                 <h2>Skills</h2>
-                <p>A mix of technical build skills and the creative/communication skills that make projects land.</p>
+                <p>A mix of technical build skills and the creative and communication skills that make projects land.</p>
             </div>
             <div class="skills-grid reveal">
                 <div class="skill-card">
@@ -724,51 +634,13 @@
             </div>
         </section>
 
-        <section id="achievements">
-            <div class="section-head reveal">
-                <p class="eyebrow">Milestones</p>
-                <h2>Achievements</h2>
-            </div>
-            <div class="timeline reveal">
-                <div class="timeline-item">
-                    <h4>🎨 Recognized Logo Designer</h4>
-                    <p>Acclaimed for innovative and detailed club logo designs.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>✍️ Academic Writing Excellence</h4>
-                    <p>Consistent excellence in structured academic writing and case studies.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>💻 Shipped Wolf-MD WhatsApp Bot</h4>
-                    <p>Built and deployed a bot with auto-status views, media downloads, and anti-delete features.</p>
-                </div>
-                <div class="timeline-item">
-                    <h4>🌐 Built the Streamer &amp; Marts Automobile Sites</h4>
-                    <p>Designed and shipped two live web apps for real use cases.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="hobbies">
-            <div class="section-head reveal">
-                <p class="eyebrow">Outside of work</p>
-                <h2>Hobbies</h2>
-            </div>
-            <div class="hobby-grid reveal">
-                <div class="hobby-card"><span class="ic">⚽</span><span>Football</span></div>
-                <div class="hobby-card"><span class="ic">🕹️</span><span>Gaming</span></div>
-                <div class="hobby-card"><span class="ic">🧠</span><span>Trivia</span></div>
-                <div class="hobby-card"><span class="ic">💡</span><span>Learning</span></div>
-            </div>
-        </section>
-
         <section id="contact">
             <div class="section-head reveal">
                 <p class="eyebrow">Let's connect</p>
                 <h2>Contact Me</h2>
             </div>
             <div class="contact-card reveal">
-                <p>Open to collaborations, freelance work and just a good conversation about football or code. Reach out on whichever platform works best for you.</p>
+                <p>Open to collaborations, freelance work, and new opportunities. Reach out on whichever platform works best for you.</p>
                 <div class="contact-icons">
                     <a href="https://wa.me/254799582173" target="_blank" rel="noopener"><img src="whatsapp logo.png" alt="">WhatsApp</a>
                     <a href="mailto:colincesibuor122@gmail.com"><img src="gmail-icon-logo.png" alt="">Email</a>
@@ -780,7 +652,7 @@
     </main>
 
     <footer>
-        <p>© <span id="year"></span> Colince Lupin — Designed with passion and creativity.</p>
+        <p>© <span id="year"></span> Colince Lupin. All rights reserved.</p>
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
@@ -841,9 +713,9 @@
 
         // Typing effect for tagline
         const phrases = [
-            "Coder. Designer. Writer. Strategist.",
+            "Developer & Designer.",
             "Turning ideas into working projects.",
-            "In the wilderness of challenges, I rise like a wolf."
+            "Detail-driven, fast-learning, reliable."
         ];
         const typedEl = document.getElementById('typedTagline');
         let phraseIndex = 0, charIndex = 0, deleting = false;
