@@ -1,66 +1,55 @@
-🌟 About Me 🌟
-Hello! I’m Colince Lupin, a dedicated and creative individual passionate about leveraging technology and design to solve challenges. My interests include:
+# Colince Lupin — Portfolio
 
-Football: Strategic gameplay and content creation.
-Coding: Building bots and websites with practical expertise.
-Design: Crafting innovative logos and graphics.
-Academic Excellence: Producing high-quality essays and case studies.
+Personal portfolio site for Colince Lupin, developer and designer. Built as a single static page — no build step, no dependencies.
 
-“In the wilderness of challenges, I rise with the strength of a wolf, led by the wisdom of Lupin.”
+**Live site:** https://lupin-lion.github.io/portfolio/
 
-🛠️ Skills
-I excel in the following areas:
+## Features
 
-⚽ Football Content Creation: Designing logos, providing commentary, and strategizing in Dream League Soccer.
-💻 Coding: Developing websites and bots through hands-on learning.
-🎨 Creative Design: Delivering detailed, high-quality outputs.
-✍ Writing: Crafting professional and academic documents.
-🌐 Digital Marketing: Building online communities and enhancing brand presence.
+- Responsive layout with a dedicated mobile nav and tuned spacing for small/short screens
+- Light/dark theme toggle (persisted in `localStorage`)
+- Scroll-spy navigation, scroll-triggered section reveals, and a scroll progress bar
+- Typing-effect tagline in the hero section
 
+## Tech stack
 
-🚀 Projects
-1. Wolf-MD WhatsApp Bot
+Plain HTML, CSS, and vanilla JavaScript — no frameworks or build tooling. Fonts are loaded from Google Fonts (Space Grotesk, Inter).
 
-Description: A versatile bot offering auto-status views, media downloads, and anti-delete features.
-Technologies Used: Python, Node.js
+## Project structure
 
+```
+portfolio/
+├── index.html          # entire site: markup, styles, and script
+├── profile.logo.jpg    # profile photo / favicon
+├── *.png, *.PNG, *.jpg # project thumbnails and social icons
+├── robots.txt
+└── sitemap.xml
+```
 
-2. Football Club Logos
+## Running locally
 
-Description: Professionally designed logos for various football clubs using Illustrator and Canva.
-Technologies Used: Illustrator, Canva
+Since it's a static page, just open `index.html` in a browser, or serve it locally:
 
+```bash
+python -m http.server 8000
+```
 
-3. Academic Case Studies
+Then visit `http://localhost:8000`.
 
-Description: Detailed analyses on topics like organizational behavior and employee engagement.
-Technologies Used: MS Word, LaTeX
+## Sections
 
+- **About** — brief introduction
+- **Skills** — core skills and a tag cloud of tools/technologies
+- **Projects** — Streamer Website, Wolf-MD WhatsApp Bot, Marts Automobile Website, Academic Case Studies
+- **Contact** — WhatsApp, email, Facebook, and GitHub links
 
+## Contact
 
-🏆 Achievements
+- WhatsApp: https://wa.me/254799582173
+- Email: colincesibuor122@gmail.com
+- Facebook: https://www.facebook.com/share/1EpCRS7kx4/
+- GitHub: https://github.com/Lupin-lion
 
+## License
 
-🎨 Acclaimed for innovative and detailed logo designs.
-✍ Demonstrated consistent excellence in structured academic writing.
-
-
-🎯 Hobbies
-
-⚽ Football
-🕹 Gaming
-🧠 Trivia
-💡 Learning
-
-
-📞 Contact Me
-I’m open to collaborations and opportunities. Connect with me via:
-
-WhatsApp: Click Here
-Email: colincesibuor122@gmail.com
-Facebook: Visit Profile
-GitHub: View Profile 
-
-
-📝 License
-This portfolio is available for inspiration. Feel free to explore and adapt, with credit to © 2025 Colince Lupin.
+© 2025 Colince Lupin. Feel free to use this as a reference for your own portfolio, with credit.
